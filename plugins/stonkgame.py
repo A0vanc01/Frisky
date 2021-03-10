@@ -25,7 +25,7 @@ class StonkGamePlugin(FriskyPlugin):
     def command_stonkgame(self, message: MessageEvent) -> FriskyResponse:
         if len(message.args) == 0:
             return self.help
-        command = message.args[0]
+        command = message.args[0].lower()
         channel_name = message.channel_name
 
         try:
